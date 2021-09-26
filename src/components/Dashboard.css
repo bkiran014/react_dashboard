@@ -1,0 +1,21 @@
+.card-item{
+    margin: 10px;
+    min-height: 250px;
+    color: #fff;
+    border-radius: 10px;
+}
+.card-text{
+    margin-top: 50px;
+}
+.bg-1{
+    background-color: #2EC3BB;
+}
+.bg-2{
+    background-color: #F2713A;
+}
+.bg-3{
+    background-color: #F77293;
+}
+.bg-4{
+    background-color: #9587FD;
+}
