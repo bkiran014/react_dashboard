@@ -14,43 +14,58 @@ const Dashboard = () => {
         document.title = "Dasboard | React App"
     }, []);
 
-    return (
-        <Container>
-            <CardGroup className="d-block">
-                <Card className="border-0">
-                    <Row>
-                        <Col>
-                            <Card.Body className="bg-1 text-center card-item">
-                                <Card.Title as="h1"> Counter Increment</Card.Title>
-                                <Card.Text>
-                                    <Counter />
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Body className="bg-2 text-center card-item">
-                                <Card.Title as="h1"> Dynamic Number</Card.Title>
-                                <Card.Text>
-                                    <Number />
-                                </Card.Text>
-                            </Card.Body>
-                        </Col>
-                        <Col>
-                            <Card.Body className="bg-3 text-center card-item">
-                                <Card.Title as="h1"><FaClock /> Clock</Card.Title>
-                                <Card.Text>
-                                    <ClockTime />
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Body className="bg-4 text-center card-item">
-                                <Card.Title as="h1"><WiCloud /> Weather</Card.Title>
-                                <Card.Text>
-                                    <Weather />
-                                </Card.Text>
-                            </Card.Body>
-                        </Col>
-                    </Row>
-                </Card>
-            </CardGroup>
-        </Container>
+    return ( 
+      <div>
+        <div className="content-wrapper">
+          <div className="content-header">
+            <Container fluid>
+              <Row className="mb-2">
+                <Col>
+                  <h5 className="m-0 text-dark" style={{ borderBottom: '1px solid #ccc' }}>DASHBOARD</h5>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+          <section className="content">
+            <Container fluid>
+              <Row>
+                <Col className="col-lg-6 col-12">
+                  <Card.Body className="bg-1 text-center card-item">
+                      <Card.Title as="h1"> Counter Increment</Card.Title>
+                      <Card.Text as="div">
+                          <Counter />
+                      </Card.Text>
+                  </Card.Body>
+                </Col>
+                <Col className="col-lg-6 col-12">
+                  <Card.Body className="bg-2 text-center card-item">
+                      <Card.Title as="h1"> Clock</Card.Title>
+                      <Card.Text as="div">
+                          <ClockTime />
+                      </Card.Text>
+                  </Card.Body>
+                </Col>
+                <Col className="col-lg-6 col-12">
+                  <Card.Body className="bg-3 text-center card-item">
+                      <Card.Title as="h1"> Dynamic Number</Card.Title>
+                      <Card.Text as="div">
+                          <Number />
+                      </Card.Text>
+                  </Card.Body>
+                </Col>
+                <Col className="col-lg-6 col-12">
+                  <Card.Body className="bg-4 text-center card-item">
+                    <Card.Title as="h1"> Weather</Card.Title>
+                    <Card.Text as="div">
+                        <Weather />
+                    </Card.Text>
+                  </Card.Body>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+        </div>
+      </div>
     );
 }
 

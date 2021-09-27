@@ -1,27 +1,25 @@
-import React from 'react';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
-import "bootstrap/dist/css/bootstrap.min.css";
-import Home from './components/Home';
-import Dashboard from './components/Dashboard';
+import './App.css';
 import Header from './components/layouts/Header';
-import Footer from './components/layouts/Footer';
+import Menu from './components/layouts/Menu';
+import Dashboard from './components/Dashboard';
 import Contact from './components/Contact';
-import "./App.css";
+import Home from './components/Home';
+import Footer from './components/layouts/Footer';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 
 function App() {
   return (
-    <div>
-      
-      <Router>
-        <Header/>
+    <div className="wrapper">
+    <Router>
+      <Header/>
+      <Menu/>
           <Switch>
-            <Route exact path='/'component={Home}/>
+            <Route exact path='/' component={Home}/>
             <Route path='/dashboard' component={Dashboard}/>
             <Route path='/contact' component={Contact}/>
           </Switch>
-        <Footer/>
+      <Footer/>
       </Router>
-      
     </div>
   );
 }

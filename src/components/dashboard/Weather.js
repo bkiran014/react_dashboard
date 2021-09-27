@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { Form } from 'react-bootstrap';
 
 const Weather = () => {
   
@@ -25,10 +26,10 @@ const Weather = () => {
 
   return (
     <span>
-        <form onSubmit={submitHandler}>
-            <input size="30" type="text" name="city" onChange={changeHandler} value={city}/>
-            <input type="submit" value="Get Temperature" />
-        </form><br />
+        <Form className="form-inline" onSubmit={submitHandler}>
+            <input className="form-control" size="30" type="text" name="city" onChange={changeHandler} value={city}/>
+            <input className="form-control" type="submit" value="Get Temperature" />
+        </Form><br />
         <div>
             <span style={{ fontSize: '22px',fontWeight: 'bold'}}>{result}</span> 
         </div>

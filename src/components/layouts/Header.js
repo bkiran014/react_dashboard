@@ -1,25 +1,38 @@
-import React,{Component} from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Button, Form, Nav } from 'react-bootstrap';
+import { FaBars, FaSearch, FaUserCircle } from 'react-icons/fa';
 
 class Header extends Component {
-    render() {
-        return(
-			<Navbar bg="light" expand="lg">
-				<Container>
-					<Navbar.Brand as={Link} to="/"><img style={{height:'100px',width:'100%'}} src="https://global-uploads.webflow.com/5eb266960d5bdff6aa937e5e/5eeb187c106afb31f399fd3b_SunRay_Logo.svg"/></Navbar.Brand>
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="ms-auto">
-							<Nav.Link as={Link} to="/">Home</Nav.Link>
-							<Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
-							<Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-		  	</Navbar>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Nav className="main-header navbar navbar-expand navbar-white navbar-light">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link" data-widget="pushmenu" href="#"><FaBars /></a>
+            </li>
+          </ul>
+          <ul className="navbar-nav ml-auto">
+            <Form className="form-inline ml-3">
+              <div className="input-group input-group-sm">
+                <input className="form-control form-control-navbar" type="search" placeholder="Search With W/0 #, Job Name, Job Address" aria-label="Search" />
+                <div className="input-group-append">
+                  <Button className="btn btn-navbar" type="submit">
+                    <FaSearch />
+                  </Button>
+                </div>
+              </div>
+            </Form>
+            <li className="nav-item">
+              <a className="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+                <FaUserCircle size="30px" />
+              </a>
+            </li>
+          </ul>
+        </Nav>
+      </div>
+    );
+  }
 }
 
 export default Header;
