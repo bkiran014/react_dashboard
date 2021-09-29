@@ -68,8 +68,11 @@
 .navbar-light .btn-navbar, .navbar-light .form-control-navbar {
   background: #fff;
 }
-.sidebar-mini.sidebar-collapse .sidebar .create-request, .sidebar-mini.sidebar-collapse .sidebar .new-feature {
+.sidebar-mini.sidebar-collapse .sidebar .new-feature {
   visibility: hidden;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused, .sidebar-mini.sidebar-collapse .main-sidebar:hover .new-feature{
+  visibility: visible;
 }
 .nav-sidebar .nav-link p {
   color:#fff;
@@ -145,10 +148,102 @@
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 thead {
   background: #2c5998;
   color: #fff;
 }
+.table-bordered td, .table-bordered th{
+  font-size: 14px;
+}
+.create-request{
+  background: #e4953f;
+  border: "none";
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.new-feature .nav-link{
+  background: #e4953f;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: #fff;
+}
+.create-request .nav-link:not(.active):hover{
+  background: #e4953f;
+}
+
+.pagination {
+	float: right;
+	margin: 0 0 5px;
+}
+.pagination li a {
+	border: none;
+	font-size: 13px;
+	min-width: 30px;
+	min-height: 30px;
+	color: #999;
+	margin: 0 2px;
+	line-height: 30px;
+	border-radius: 2px !important;
+	text-align: center;
+	padding: 0 6px;
+}
+.pagination li a:hover {
+	color: #666;
+}	
+.pagination li.active a, .pagination li.active a.page-link {
+	background: #03A9F4;
+}
+.pagination li.active a:hover {        
+	background: #0397d6;
+}
+.pagination li.disabled i {
+	color: #ccc;
+}
+.pagination li i {
+	font-size: 16px;
+	padding-top: 6px
+}
+.hint-text {
+	float: left;
+	margin-top: 10px;
+	font-size: 13px;
+}   
+
+/* Modal styles */
+.modal .modal-dialog {
+	max-width: 400px;
+}
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+	padding: 20px 30px;
+}
+.modal .modal-content {
+	border-radius: 3px;
+	font-size: 14px;
+}
+.modal .modal-footer {
+	background: #ecf0f1;
+	border-radius: 0 0 3px 3px;
+}
+.modal .modal-title {
+	display: inline-block;
+}
+.modal .form-control {
+	border-radius: 2px;
+	box-shadow: none;
+	border-color: #dddddd;
+}
+.modal textarea.form-control {
+	resize: vertical;
+}
+.modal .btn {
+	border-radius: 2px;
+	min-width: 100px;
+}	
+.modal form label {
+	font-weight: normal;
+}	
