@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCog, FaEnvelope, FaHome, FaTachometerAlt, FaUserCircle } from 'react-icons/fa';
+import { FaCog, FaEnvelope, FaHome, FaPlus, FaTachometerAlt, FaUserCircle } from 'react-icons/fa';
 import logo from "./sunraynotice.svg";
 import { Button } from 'react-bootstrap';
 
@@ -30,10 +30,12 @@ class Menu extends Component {
                     </div>
                   </Link>
                 </li>
-                <li className="nav-item"><br/>
-                  <button className="create-request nav-link btn-sm" style={{ fontWeight: "bold", background: "#e4953f", border: "none", boxShadow: "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
-                    <Link to="/">CREATE NEW REQUEST</Link>
-                  </button>
+                <li className="create-request nav-item">
+                  <Link to="/">
+                    <div className="nav-link" >
+                      <FaPlus style={{fill: 'white'}}/> <p>CREATE NEW REQUEST</p>
+                    </div>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/">
@@ -56,10 +58,12 @@ class Menu extends Component {
                     </div>
                   </Link>
                 </li>
-                <li className="nav-item" style={{ paddingLeft: '30px' }}>
-                  <Button className="new-feature nav-link btn-sm" style={{ background: "#e4953f", borderRadius: "20px", border: "none", boxShadow: "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}>
-                    <Link to="/">New Feature </Link>
-                  </Button>
+                <li className="new-feature nav-item" style={{ paddingLeft: '30px' }}>
+                  <Link to="/">
+                    <Button className="nav-link btn-sm" >
+                      New Feature 
+                    </Button>
+                  </Link>
                 </li>
               </ul>
             </nav>
