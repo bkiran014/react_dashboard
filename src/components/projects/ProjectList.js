@@ -84,7 +84,7 @@ const ProjectList = () => {
             </thead>
             <tbody>
                     {
-                        projects.map(project => (
+                        !projects ? null :projects.map(project => (
                             <tr key={project.id}>
                                 <Project project={project} />
                             </tr>
